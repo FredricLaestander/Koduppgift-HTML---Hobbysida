@@ -5,13 +5,14 @@
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
   font-family: "Anton", sans-serif;
   margin: 0;
 }
+
 img {
   display: block;
   height: auto;
@@ -21,33 +22,46 @@ img {
 h1 {
   font-family: "Valorant", "Anton", sans-serif;
   color: white;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   text-align: center;
 }
 
 header {
-  position: relative;
+  background-image: url("https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/b9f3efa9355803cc44e4c59d3f4437cab192bec3-5120x1616.png?auto=format&fit=fill&q=80&h=1616");
+  min-height: 65vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .description {
   margin: 2rem 12rem;
   font-size: 1.25rem;
 }
+
 nav {
   background-color: rgb(228, 228, 228);
   padding: 1rem 4rem;
 }
+
 nav ol {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+}
+nav a:hover {
+  text-decoration: underline;
 }
 
 nav li::marker {
-    color: #fd4556;
-    
+  color: #fd4556;
 }
 
 .nav_pic {
@@ -74,18 +88,43 @@ main p {
 }
 
 .video {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 video {
-    width: 100%;
-    max-width: 600px;
+  width: 100%;
+  max-width: 600px;
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  font-family: sans-serif;
 }
 
 @media (max-width: 856px) {
   .nav_pic {
     flex-direction: column;
-    margin-right: 12rem;
+  }
+
+  .description,
+  main,
+  .nav_pic {
+    margin-inline: 2rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  header img {
+    height: 15rem;
+  }
+
+  .description {
+    font-size: 1rem;
   }
 }
